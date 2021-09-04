@@ -3,11 +3,13 @@ import java.util.Scanner;
 public class recordIncome {
     static String incomeDescription;
     static double incomeAmount;
-
+    static linkedList incomeList = new linkedList();
+    
     public static void main(String[] arg){
         Scanner in = new Scanner(System.in);
         incomeDescription = description(in);
         incomeAmount = amount(in);
+        incomeList.addNode(incomeAmount, incomeDescription);
         continueProgramTwo(in);
     }
 
@@ -20,7 +22,7 @@ public class recordIncome {
 
     public static double amount(Scanner in){
         System.out.println("\nAdd the income amount for: " + incomeDescription);
-        double amount = CheckInput.getDouble();
+        double amount = Math.round(CheckInput.getDouble()*100.0)/100.0;
         //PUSH INCOME AMOUNT TO LINKED LIST
         return amount;
     }

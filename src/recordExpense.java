@@ -3,12 +3,15 @@ import java.util.Scanner;
 public class recordExpense {
     static String expenseDescription;
     static double expenseAmount;
-
+    static linkedList expensesList = new linkedList();
+    
     public static void main(String[] arg){
         Scanner in = new Scanner(System.in);
         expenseDescription = description(in);
         expenseAmount = amount(in);
+        expensesList.addNode(expenseAmount, expenseDescription);
         continueProgramTwo(in);
+        
     }
 
     public static String description(Scanner in){
@@ -21,7 +24,7 @@ public class recordExpense {
     public static double amount(Scanner in){
         //System.out.println("running expenseAmount");
         System.out.println("\nAdd the expense amount for: " + expenseDescription);
-        double amount = CheckInput.getDouble();
+        double amount = Math.round(CheckInput.getDouble()*100.0)/100.0;
         //PUSH EXPENSE AMOUNT TO LINKED LIST
         return amount;
     }

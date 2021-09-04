@@ -13,7 +13,7 @@ public class lab2 {
     public static double initProgram(Scanner in) {
         System.out.println("\n\nWelcome to your Expense Recorder.");
         System.out.println("Please enter your starting balance:");
-        double initBal = CheckInput.getDouble();
+        double initBal = Math.round(CheckInput.getDouble()*100.0)/100.0;
         return initBal;
     }
 
