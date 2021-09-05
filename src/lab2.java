@@ -39,7 +39,7 @@ public class lab2 {
         while(run){
             switch (choice){
             case 0:
-                System.out.println("Goodbye");
+                //displaySummary.main(null); INCOMPLETE
                 run = false;
                 break;
             case 1:
@@ -49,13 +49,13 @@ public class lab2 {
                 recordIncome.main(null);
                 break;
             case 3:
-                calcBalance.main(null); //incomplete
+                calcBalance.main(null);
                 break;
             case 4:
-                displayAllExpenses.main(null); //incomplete
+                displayAllExpenses.main(null);
                 break;
             case 5:
-                displayAllIncome.main(null); //incomplete
+                displayAllIncome.main(null);
                 break;
             default:
                 System.out.println("Invalid Input.");
