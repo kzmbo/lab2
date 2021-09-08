@@ -18,6 +18,5 @@ public class displayAllExpenses {
 			lab2.askPrompt(in);
 			System.exit(0);
 		}
-    	System.exit(0);
     }
 }
