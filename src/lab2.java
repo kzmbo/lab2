@@ -13,7 +13,7 @@ public class lab2 {
     public static double initProgram(Scanner in) {
         System.out.println("\n\nWelcome to your Expense Recorder.");
         System.out.println("Please enter your starting balance:");
-        double initBal = Math.round(CheckInput.getDouble()*100.0)/100.0;
+        double initBal = CheckInput.getDouble();
         return initBal;
     }
 
@@ -39,7 +39,7 @@ public class lab2 {
         while(run){
             switch (choice){
             case 0:
-                //displaySummary.main(null); INCOMPLETE
+                System.out.println("Goodbye");
                 run = false;
                 break;
             case 1:
@@ -49,13 +49,13 @@ public class lab2 {
                 recordIncome.main(null);
                 break;
             case 3:
-                calcBalance.main(null);
+                calcBalance.main(null); //incomplete
                 break;
             case 4:
-                displayAllExpenses.main(null);
+                displayAllExpenses.main(null); //incomplete
                 break;
             case 5:
-                displayAllIncome.main(null);
+                displayAllIncome.main(null); //incomplete
                 break;
             default:
                 System.out.println("Invalid Input.");
