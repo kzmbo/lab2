@@ -21,8 +21,11 @@ public class calcBalance {
             finalBal = finalBal + currentI.money;    
             currentI = currentI.next;    
         }
+		System.out.println("-----------------------------------------------------------------------------");
+		finalBal = Math.round(finalBal*100.0)/100.0;
     	System.out.println("$" + finalBal + " is your final balance.");
     	System.out.println("Hit Enter to continue...");
+		System.out.println("-----------------------------------------------------------------------------");
     	if(in.hasNextLine()) {
 			lab2.askPrompt(in);
 			System.exit(0);

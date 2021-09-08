@@ -28,7 +28,7 @@ public class lab2 {
         System.out.println("3. Calculate my current balance.");
         System.out.println("4. Display all records of expenses.");
         System.out.println("5. Display all records of income.");
-        System.out.println("-----------------------------------------------------------------------------\n");
+        System.out.println("-----------------------------------------------------------------------------");
         int choice = CheckInput.getPositiveInt();
         choices(choice, in);
         return choice;
@@ -39,7 +39,7 @@ public class lab2 {
         while(run){
             switch (choice){
             case 0:
-                //displaySummary.main(null); INCOMPLETE
+                displaySummary.main(null);
                 run = false;
                 break;
             case 1:
