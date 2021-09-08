@@ -17,7 +17,6 @@ public class displaySummary {
 
         while(currentI != null) {
             //Subtracts expenses from finalBal
-            //totInc = totInc + currentI.money;
             finalBal = finalBal + currentI.money;
             currentI = currentI.next;
 
@@ -25,8 +24,7 @@ public class displaySummary {
         System.out.println("Total income: $" + totInc);
 
         while(currentE != null) {
-            //Calculates total expenses.
-            //totExp = totExp + currentE.money;
+            //Calculates total expenses
             finalBal = finalBal - currentE.money;
             currentE = currentE.next;
         }

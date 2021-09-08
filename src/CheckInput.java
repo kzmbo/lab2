@@ -131,4 +131,47 @@ public class CheckInput {
         }
         return false;
     }
+
+    public static double checkDollaSign(){
+        Scanner in = new Scanner( System.in );
+        boolean isRunning = true;
+        while(isRunning) {
+            if(in.hasNextDouble()){
+                System.out.println("the user inputted a double");
+                double amount = in.nextDouble();
+                isRunning = false;
+                return amount;
+            }
+            if(in.hasNextLine()){
+                String input = in.nextLine();
+                char[] stringToInt = new char[input.length()];
+                if (input.charAt(0) == '$') {
+                    System.out.println("the string has a dollar sign");
+                    for (int i = 0; i < input.length() - 1; i++) {
+                        stringToInt[i] = input.charAt(i + 1);
+                    }
+                    try {
+                        String s = String.valueOf(stringToInt);
+                        double amount = Double.parseDouble(s);
+                        isRunning = false;
+                        return amount;
+                    } catch (Exception e) {
+                        System.out.println("\n-----------------------------------------------------------------------------");
+                        System.out.println("Invalid Input");
+                        System.out.println("Please input with the correct format: [ $(amount) ]");
+                        System.out.println("-----------------------------------------------------------------------------");
+                        System.out.print("Amount: ");
+                    }
+                } else {
+                    System.out.println("\n-----------------------------------------------------------------------------");
+                    System.out.println("Invalid Input");
+                    System.out.println("Please input with the correct format: [ $(amount) ]");
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.print("Amount: ");
+                }
+            }
+        }
+        return 0;
+    }
+
 }

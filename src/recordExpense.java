@@ -29,7 +29,7 @@ public class recordExpense {
     */
     public static double amount(Scanner in){
         System.out.println("\nAdd the expense amount for: " + expenseDescription);
-        double amount = Math.round(CheckInput.getDouble()*100.0)/100.0;
+        double amount = Math.round((CheckInput.checkDollaSign()) * 100.0) / 100.0;
         return amount;
     }
 
