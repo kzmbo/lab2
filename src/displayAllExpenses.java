@@ -13,7 +13,10 @@ public class displayAllExpenses {
             currentE = currentE.next;    
         }
     	System.out.println("Your total expenses are: $" + totExp);
-    	lab2.askPrompt(in);
-    	System.exit(0);
+		System.out.println("Hit Enter to continue...");
+		if(in.hasNextLine()) {
+			lab2.askPrompt(in);
+			System.exit(0);
+		}
     }
 }

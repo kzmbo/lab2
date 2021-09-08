@@ -13,7 +13,10 @@ public class displayAllIncome {
             currentI = currentI.next;    
         }
     	System.out.println("Your total income is: $" + totInc);
-    	lab2.askPrompt(in);
-    	System.exit(0);
+		System.out.println("Hit Enter to continue...");
+		if(in.hasNextLine()) {
+			lab2.askPrompt(in);
+			System.exit(0);
+		}
     }
 }

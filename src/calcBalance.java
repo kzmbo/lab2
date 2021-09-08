@@ -22,8 +22,10 @@ public class calcBalance {
             currentI = currentI.next;    
         }
     	System.out.println("$" + finalBal + " is your final balance.");
-    	lab2.askPrompt(in);
-    	System.exit(0);
-            
+    	System.out.println("Hit Enter to continue...");
+    	if(in.hasNextLine()) {
+			lab2.askPrompt(in);
+			System.exit(0);
+		}
     }
 }
